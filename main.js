@@ -79,6 +79,7 @@ Vue.component('product', {
             return this.variants[this.selectedVariant].variantQuantity
         },
         shipping() {
+            console.log(this.premium)
             if (this.premium) {
                 return "Free"
             }
@@ -86,6 +87,15 @@ Vue.component('product', {
         }
     }
 })
+
+// Vue.component('details', {
+//     props: {
+//         detailsData: {
+//             type: Boolean,
+
+//         }
+//     }
+// })
 
 var app = new Vue({
     el: '#app',
